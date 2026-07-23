@@ -51,7 +51,7 @@ class LLMHandler:
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name,
-                torch_dtype=torch.float32,
+                dtype=torch.float32,
             )
             self.model.eval()
         except Exception as exc:
